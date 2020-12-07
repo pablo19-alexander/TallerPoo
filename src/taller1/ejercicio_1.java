@@ -1,7 +1,14 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ 9.Calcular la utilidad que un trabajador recibe en el reparto anual de utilidades
+si a este se le asigna un porcentaje de su salario mensual que depende de su antigüedad
+en la empresa de acuerdo con la siguiente tabla:
+Tiempo					        Utilidad
+Menos de 1 año			12M		5 % del salario
+1 año o más y menos de 2 años	12-23M		7% del salario
+2 años o más y menos de 5 años	24-59M		10% del salario
+5 años o más y menos de 10 años	60-119M		15% del salario
+10 años o más	120M				20% del salario
+
  */
 package taller1;
 import java.util.Scanner;
@@ -11,31 +18,52 @@ import java.util.Scanner;
  */
 public class ejercicio_1 {
     public static void main(String[] args) {
-        final int precioPC = 500;
-            Scanner input = new Scanner(System.in);
-         int cantidadPC=0;
-         double VALORcompra,valordescuento,VALORpagar,dto;
-         System.out.print("Número de PC a comprar: ");
-         cantidadPC=input.nextInt();
-         if(cantidadPC<5){
-             dto=10;
-         }
-         else{
-             if(cantidadPC<10){
-                 dto=20;
-             }
-             else{
-                 dto=40;
-             }
-         }
-         VALORcompra=precioPC*cantidadPC;
-         valordescuento=VALORcompra*dto/100;
-         VALORpagar=VALORcompra-valordescuento;
-         System.out.println("Cantdad de PC=     "+cantidadPC);
-         System.out.println("Valor de la Compra=   "+VALORcompra);
-         System.out.println("Valor de Descuento="+valordescuento);
-         System.out.println("Valor a Pagar=    "+VALORpagar);
-  
+        Scanner input = new Scanner(System.in);
+        
+        double salario;
+        int tiempoT;
+            System.out.println("INGRESE SU SALARIO");
+            salario=input.nextInt();
+        System.out.println("CUANTO TIEMPO LLEVA EN LA EMPRESA");
+        tiempoT =input.nextInt();
+        
+        if(tiempoT<12){
+            
+            salario=(salario*0.05)+salario;
+           
+        }
+        else {
+            if((tiempoT>=12)&&(tiempoT<=23)){
+                salario=salario+(salario*0.07);
+                
+            }
+        else{
+            if((tiempoT>=24)&&(tiempoT<=59)){
+                    salario=salario+(salario*0.1);
+            }
+        else{
+            if((tiempoT>=60)&&(tiempoT<=119)){
+                salario=salario+(salario*0.15);
+                
+                }
+                else
+                salario=salario+(salario*0.2);
+            }
+            }
+            }
+        System.out.println("SU SALARIO ES DE: "+salario);
     }
-    
 }
+            
+             
+            
+            
+        
+         
+       
+    
+      
+  
+    
+    
+
