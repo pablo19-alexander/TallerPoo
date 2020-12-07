@@ -3,11 +3,11 @@
 si a este se le asigna un porcentaje de su salario mensual que depende de su antigüedad
 en la empresa de acuerdo con la siguiente tabla:
 Tiempo					        Utilidad
-Menos de 1 año			12M		5 % del salario
-1 año o más y menos de 2 años	12-23M		7% del salario
-2 años o más y menos de 5 años	24-59M		10% del salario
-5 años o más y menos de 10 años	60-119M		15% del salario
-10 años o más	120M				20% del salario
+Menos de 1 año			12Ms		5 % del salario
+1 año o más y menos de 2 años	12-23Ms		7% del salario
+2 años o más y menos de 5 años	24-59Ms		10% del salario
+5 años o más y menos de 10 años	60-119Ms		15% del salario
+10 años o más	120Ms				20% del salario
 
  */
 package taller1;
